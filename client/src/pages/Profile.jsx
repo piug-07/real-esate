@@ -35,7 +35,7 @@ export default function Profile() {
   // allow write: if
   // request.resource.size < 2 * 1024 * 1024 &&
   // request.resource.contentType.matches('image/.*')
-
+console.log(formData)
   useEffect(() => {
     if (file) {
       handleFileUpload(file);
@@ -82,7 +82,7 @@ export default function Profile() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      if (data.success === false) {
+      if (data.success === false) { 
         dispatch(updateUserFailure(data.message));
         return;
       }
