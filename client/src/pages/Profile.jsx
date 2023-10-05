@@ -125,7 +125,7 @@ export default function Profile() {
       dispatch(deleteUserFailure(error.message));
     }
   };
-
+ 
   const handleShowListings = async () => {
     try {
       setShowListingsError(false);
