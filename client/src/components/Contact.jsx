@@ -25,12 +25,12 @@ export default function Contact({ listing }) {
           const data = await response.json();
           setLandlord(data);
         } else {
-        //   throw a new Error('Failed to fetch landlord data');
+          throw  Error('Failed to fetch landlord data');
         }
       } catch (error) {
         console.error(error);
       }
-    };
+    };  
 
     fetchLandlord();
   }, [listing.userRef]);
